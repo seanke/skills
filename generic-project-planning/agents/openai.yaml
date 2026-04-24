@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Planning"
+  short_description: "Complex planning artifacts in .plan folders"
+  default_prompt: "Use $generic-project-planning for complex, multi-part plans that need `.plan/` files."
+
+policy:
+  allow_implicit_invocation: true

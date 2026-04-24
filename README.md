@@ -36,3 +36,33 @@ Skill folders are flat and use `microsoft-` for Microsoft-related skills or `gen
 - Good combine candidates are workflows like discovery plus creation, baseline plus tuning, or docs plus code samples.
 - Good separate candidates are workflows that look related but answer different questions, such as performance tuning versus bug investigation.
 
+## Repo-Managed Skills
+
+- `generic-create-skill`
+- `generic-figma`
+- `generic-pdf`
+- `generic-project-planning`
+- `generic-prototype-app`
+- `generic-shared-agent-guidance`
+- `generic-tdd-bug-fixing`
+- `microsoft-analyzing-dotnet-performance`
+- `microsoft-azure-devops-mcp`
+- `microsoft-azure-observability`
+- `microsoft-azure-pipelines-modular`
+- `microsoft-clr-activation-debugging`
+- `microsoft-convert-to-cpm`
+- `microsoft-csharp-edit-hygiene`
+- `microsoft-csharp-scripts`
+- `microsoft-directory-build-organization`
+- `microsoft-docx`
+- `microsoft-dotnet-template-workflow`
+- `microsoft-dotnet-trace-collect`
+- `microsoft-msbuild-antipatterns`
+- `microsoft-msbuild-modernization`
+- `microsoft-msbuild-performance`
+- `microsoft-msbuild-troubleshooting`
+- `microsoft-nuget-trusted-publishing`
+- `microsoft-optimizing-ef-core-queries`
+- `microsoft-reference-lookup`
+- `microsoft-run-tests`
+- `microsoft-thread-abort-migration`

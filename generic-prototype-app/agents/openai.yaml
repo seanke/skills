@@ -1,0 +1,15 @@
+interface:
+  display_name: "Prototype App"
+  short_description: "Bootstrap and publish app prototypes"
+  default_prompt: "Use $generic-prototype-app to turn an empty folder into a React + Tailwind + TypeScript prototype, create a private GitHub repo, and optionally publish it to GitHub Pages."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub MCP server for repo creation, pushes, and Pages setup"
+      transport: "streamable_http"
+      url: "https://api.githubcopilot.com/mcp/"
+
+policy:
+  allow_implicit_invocation: true

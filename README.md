@@ -5,13 +5,6 @@ Skill folders are flat and use `microsoft-` for Microsoft-related skills or `gen
 
 ## Repository Conventions
 
-### Ordering
-
-- Keep the inventory sorted by score from lowest to highest so the weakest skills are easiest to find first.
-- When scores tie, sort by skill folder name.
-- Keep skill folders flat; do not reintroduce nested skill folders for skills themselves.
-- Leave `.system/` out of the tracked inventory because those skills are application-managed.
-
 ### Naming
 
 - Use lowercase kebab-case for every skill folder.
@@ -43,46 +36,3 @@ Skill folders are flat and use `microsoft-` for Microsoft-related skills or `gen
 - Good combine candidates are workflows like discovery plus creation, baseline plus tuning, or docs plus code samples.
 - Good separate candidates are workflows that look related but answer different questions, such as performance tuning versus bug investigation.
 
-The scores below are a heuristic 1-10 quality rating based on:
-
-- frontmatter quality
-- consistent body structure
-- bundled resources and `agents/openai.yaml` coverage
-- placeholder hygiene and supporting detail
-
-Lower scores are the first cleanup targets.
-
-## Score Distribution
-
-- 10: 26
-
-## Inventory
-
-| Skill | Score |
-| --- | ---: |
-| generic-create-skill | 10 |
-| generic-figma | 10 |
-| generic-pdf | 10 |
-| generic-shared-agent-guidance | 10 |
-| generic-tdd-bug-fixing | 10 |
-| microsoft-analyzing-dotnet-performance | 10 |
-| microsoft-azure-devops-mcp | 10 |
-| microsoft-azure-observability | 10 |
-| microsoft-azure-pipelines-modular | 10 |
-| microsoft-clr-activation-debugging | 10 |
-| microsoft-convert-to-cpm | 10 |
-| microsoft-csharp-edit-hygiene | 10 |
-| microsoft-csharp-scripts | 10 |
-| microsoft-directory-build-organization | 10 |
-| microsoft-docx | 10 |
-| microsoft-dotnet-template-workflow | 10 |
-| microsoft-dotnet-trace-collect | 10 |
-| microsoft-msbuild-antipatterns | 10 |
-| microsoft-msbuild-modernization | 10 |
-| microsoft-msbuild-performance | 10 |
-| microsoft-msbuild-troubleshooting | 10 |
-| microsoft-nuget-trusted-publishing | 10 |
-| microsoft-optimizing-ef-core-queries | 10 |
-| microsoft-reference-lookup | 10 |
-| microsoft-run-tests | 10 |
-| microsoft-thread-abort-migration | 10 |

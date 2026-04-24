@@ -1,0 +1,7 @@
+interface:
+  display_name: "Azure DevOps MCP"
+  short_description: "Azure DevOps MCP setup and use"
+  default_prompt: "Use $microsoft-azure-devops-mcp for Azure DevOps MCP setup and use."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "C# Edit Hygiene"
+  short_description: "XML docs and C# cleanup"
+  default_prompt: "Use $microsoft-csharp-edit-hygiene for XML docs and C# cleanup."
+
+policy:
+  allow_implicit_invocation: true

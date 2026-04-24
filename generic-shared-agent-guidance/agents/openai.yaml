@@ -1,0 +1,7 @@
+interface:
+  display_name: "Shared Agent Guidance"
+  short_description: "Shared repo agent guidance"
+  default_prompt: "Use $generic-shared-agent-guidance for Shared repo agent guidance."
+
+policy:
+  allow_implicit_invocation: true

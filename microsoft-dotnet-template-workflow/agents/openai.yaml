@@ -1,0 +1,7 @@
+interface:
+  display_name: ".NET Template Workflow"
+  short_description: ".NET template discovery and creation"
+  default_prompt: "Use $microsoft-dotnet-template-workflow for .NET template discovery and creation."
+
+policy:
+  allow_implicit_invocation: true

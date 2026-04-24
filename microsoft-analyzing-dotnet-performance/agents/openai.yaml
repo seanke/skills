@@ -1,0 +1,7 @@
+interface:
+  display_name: ".NET Performance Patterns"
+  short_description: ".NET performance analysis"
+  default_prompt: "Use $microsoft-analyzing-dotnet-performance for .NET performance analysis."
+
+policy:
+  allow_implicit_invocation: true

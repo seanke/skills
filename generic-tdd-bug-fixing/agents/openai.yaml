@@ -1,0 +1,7 @@
+interface:
+  display_name: "TDD Bug Fixing"
+  short_description: "Regression test-driven bug fixing"
+  default_prompt: "Use $generic-tdd-bug-fixing for Regression test-driven bug fixing."
+
+policy:
+  allow_implicit_invocation: true

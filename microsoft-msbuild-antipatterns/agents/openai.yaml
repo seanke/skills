@@ -1,0 +1,7 @@
+interface:
+  display_name: "MSBuild Anti-Pattern Catalog"
+  short_description: "MSBuild anti-pattern detection"
+  default_prompt: "Use $microsoft-msbuild-antipatterns for MSBuild anti-pattern detection."
+
+policy:
+  allow_implicit_invocation: true

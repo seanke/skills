@@ -1,0 +1,7 @@
+interface:
+  display_name: "Azure Pipelines Modular"
+  short_description: "Modular Azure Pipelines design"
+  default_prompt: "Use $microsoft-azure-pipelines-modular for Modular Azure Pipelines design."
+
+policy:
+  allow_implicit_invocation: true

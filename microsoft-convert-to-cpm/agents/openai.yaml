@@ -1,0 +1,7 @@
+interface:
+  display_name: "Convert to Central Package Management"
+  short_description: "NuGet central package management conversion"
+  default_prompt: "Use $microsoft-convert-to-cpm for NuGet central package management conversion."
+
+policy:
+  allow_implicit_invocation: true

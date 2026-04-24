@@ -1,0 +1,7 @@
+interface:
+  display_name: "Create Skill"
+  short_description: "Codex skill scaffolding"
+  default_prompt: "Use $generic-create-skill for Codex skill scaffolding."
+
+policy:
+  allow_implicit_invocation: true

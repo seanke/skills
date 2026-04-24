@@ -1,0 +1,7 @@
+interface:
+  display_name: "MSBuild Troubleshooting"
+  short_description: "MSBuild build failure analysis"
+  default_prompt: "Use $microsoft-msbuild-troubleshooting for MSBuild build failure analysis."
+
+policy:
+  allow_implicit_invocation: true

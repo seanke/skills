@@ -1,0 +1,7 @@
+interface:
+  display_name: "Organizing Build Infrastructure with Directory.Build Files"
+  short_description: "MSBuild directory build organization"
+  default_prompt: "Use $microsoft-directory-build-organization for MSBuild directory build organization."
+
+policy:
+  allow_implicit_invocation: true

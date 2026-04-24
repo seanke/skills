@@ -1,0 +1,7 @@
+interface:
+  display_name: "C# Scripts"
+  short_description: "C# script execution and debugging"
+  default_prompt: "Use $microsoft-csharp-scripts for C# script execution and debugging."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Azure Observability"
+  short_description: "Azure monitoring, alerts, and KQL"
+  default_prompt: "Use $microsoft-azure-observability for Azure monitoring, alerts, and KQL."
+
+policy:
+  allow_implicit_invocation: true

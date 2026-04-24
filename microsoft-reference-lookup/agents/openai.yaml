@@ -1,0 +1,7 @@
+interface:
+  display_name: "Microsoft Reference Lookup"
+  short_description: "Official Microsoft docs and code references"
+  default_prompt: "Use $microsoft-reference-lookup for official Microsoft docs and code references."
+
+policy:
+  allow_implicit_invocation: true

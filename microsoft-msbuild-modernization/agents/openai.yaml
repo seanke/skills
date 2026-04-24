@@ -1,0 +1,7 @@
+interface:
+  display_name: "MSBuild Modernization: Legacy to SDK-style Migration"
+  short_description: "MSBuild modernization guidance"
+  default_prompt: "Use $microsoft-msbuild-modernization for MSBuild modernization guidance."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "DOCX Skill"
+  short_description: "DOCX document creation and editing"
+  default_prompt: "Use $microsoft-docx for DOCX document creation and editing."
+
+policy:
+  allow_implicit_invocation: true

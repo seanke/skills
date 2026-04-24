@@ -1,0 +1,7 @@
+interface:
+  display_name: "Thread.Abort Migration"
+  short_description: "Thread.Abort migration guidance"
+  default_prompt: "Use $microsoft-thread-abort-migration for Thread.Abort migration guidance."
+
+policy:
+  allow_implicit_invocation: true

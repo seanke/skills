@@ -1,7 +1,0 @@
-interface:
-  display_name: "Figma MCP"
-  short_description: "Figma design context extraction"
-  default_prompt: "Use $generic-figma for Figma design context extraction."
-
-policy:
-  allow_implicit_invocation: true

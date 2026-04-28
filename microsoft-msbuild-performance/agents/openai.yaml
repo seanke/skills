@@ -1,7 +1,0 @@
-interface:
-  display_name: "MSBuild Performance"
-  short_description: "MSBuild performance tuning"
-  default_prompt: "Use $microsoft-msbuild-performance for MSBuild performance tuning."
-
-policy:
-  allow_implicit_invocation: true

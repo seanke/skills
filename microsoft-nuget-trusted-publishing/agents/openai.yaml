@@ -1,7 +1,0 @@
-interface:
-  display_name: "NuGet Trusted Publishing Setup"
-  short_description: "NuGet trusted publishing setup"
-  default_prompt: "Use $microsoft-nuget-trusted-publishing for NuGet trusted publishing setup."
-
-policy:
-  allow_implicit_invocation: true

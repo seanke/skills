@@ -1,7 +1,0 @@
-interface:
-  display_name: ".NET Trace Collect"
-  short_description: ".NET trace collection and analysis"
-  default_prompt: "Use $microsoft-dotnet-trace-collect for .NET trace collection and analysis."
-
-policy:
-  allow_implicit_invocation: true

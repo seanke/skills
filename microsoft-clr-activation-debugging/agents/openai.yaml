@@ -1,7 +1,0 @@
-interface:
-  display_name: "CLR Activation Debugging"
-  short_description: "CLR activation debugging guidance"
-  default_prompt: "Use $microsoft-clr-activation-debugging for CLR activation debugging guidance."
-
-policy:
-  allow_implicit_invocation: true

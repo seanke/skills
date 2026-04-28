@@ -1,7 +1,0 @@
-interface:
-  display_name: "PDF Skill"
-  short_description: "PDF reading, creation, and editing"
-  default_prompt: "Use $generic-pdf for PDF reading, creation, and editing."
-
-policy:
-  allow_implicit_invocation: true

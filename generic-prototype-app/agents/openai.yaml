@@ -1,5 +1,5 @@
 interface:
-  display_name: "Prototype App"
+  display_name: "generic-prototype-app"
   short_description: "Bootstrap and publish app prototypes"
   default_prompt: "Use $generic-prototype-app to turn an empty folder into a React + Tailwind + TypeScript prototype, create a private GitHub repo, and optionally publish it to GitHub Pages."
 

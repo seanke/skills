@@ -1,5 +1,5 @@
 interface:
-  display_name: "Optimizing EF Core Queries"
+  display_name: "microsoft-dotnet-optimizing-ef-core-queries"
   short_description: "EF Core query optimization"
   default_prompt: "Use $microsoft-dotnet-optimizing-ef-core-queries for EF Core query optimization."
 

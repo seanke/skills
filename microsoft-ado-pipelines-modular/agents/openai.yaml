@@ -1,5 +1,5 @@
 interface:
-  display_name: "Azure Pipelines Modular"
+  display_name: "microsoft-ado-pipelines-modular"
   short_description: "Modular Azure Pipelines design"
   default_prompt: "Use $microsoft-ado-pipelines-modular for Modular Azure Pipelines design."
 

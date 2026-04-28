@@ -1,5 +1,5 @@
 interface:
-  display_name: "TDD Bug Fixing"
+  display_name: "generic-tdd-bug-fixing"
   short_description: "Regression test-driven bug fixing"
   default_prompt: "Use $generic-tdd-bug-fixing for Regression test-driven bug fixing."
 

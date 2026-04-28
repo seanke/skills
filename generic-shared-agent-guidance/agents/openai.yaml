@@ -1,5 +1,5 @@
 interface:
-  display_name: "Shared Agent Guidance"
+  display_name: "generic-shared-agent-guidance"
   short_description: "Shared repo agent guidance"
   default_prompt: "Use $generic-shared-agent-guidance for Shared repo agent guidance."
 

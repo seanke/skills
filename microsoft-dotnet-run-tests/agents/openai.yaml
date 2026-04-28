@@ -1,5 +1,5 @@
 interface:
-  display_name: "Run .NET Tests"
+  display_name: "microsoft-dotnet-run-tests"
   short_description: "Running and filtering .NET tests"
   default_prompt: "Use $microsoft-dotnet-run-tests for Running and filtering .NET tests."
 

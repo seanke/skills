@@ -1,5 +1,5 @@
 interface:
-  display_name: "C# Edit Hygiene"
+  display_name: "microsoft-dotnet-csharp-edit-hygiene"
   short_description: "XML docs and C# cleanup"
   default_prompt: "Use $microsoft-dotnet-csharp-edit-hygiene for XML docs and C# cleanup."
 

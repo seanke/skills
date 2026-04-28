@@ -1,5 +1,5 @@
 interface:
-  display_name: "MSBuild Anti-Pattern Catalog"
+  display_name: "microsoft-dotnet-msbuild-antipatterns"
   short_description: "MSBuild anti-pattern detection"
   default_prompt: "Use $microsoft-dotnet-msbuild-antipatterns for MSBuild anti-pattern detection."
 

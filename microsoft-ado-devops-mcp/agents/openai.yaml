@@ -1,5 +1,5 @@
 interface:
-  display_name: "Azure DevOps MCP"
+  display_name: "microsoft-ado-devops-mcp"
   short_description: "Azure DevOps MCP setup and use"
   default_prompt: "Use $microsoft-ado-devops-mcp for Azure DevOps MCP setup and use."
 

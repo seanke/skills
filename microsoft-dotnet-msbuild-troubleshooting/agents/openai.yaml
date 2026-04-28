@@ -1,5 +1,5 @@
 interface:
-  display_name: "MSBuild Troubleshooting"
+  display_name: "microsoft-dotnet-msbuild-troubleshooting"
   short_description: "MSBuild build failure analysis"
   default_prompt: "Use $microsoft-dotnet-msbuild-troubleshooting for MSBuild build failure analysis."
 

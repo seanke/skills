@@ -1,5 +1,5 @@
 interface:
-  display_name: "Create Skill"
+  display_name: "generic-create-skill"
   short_description: "Codex skill scaffolding"
   default_prompt: "Use $generic-create-skill for Codex skill scaffolding."
 

@@ -1,5 +1,5 @@
 interface:
-  display_name: "Project Planning"
+  display_name: "generic-project-planning"
   short_description: "Complex planning artifacts in .plan folders"
   default_prompt: "Use $generic-project-planning for complex, multi-part plans that need `.plan/` files."
 

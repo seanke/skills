@@ -1,5 +1,5 @@
 interface:
-  display_name: "DOCX Skill"
+  display_name: "microsoft-docx"
   short_description: "DOCX document creation and editing"
   default_prompt: "Use $microsoft-docx for DOCX document creation and editing."
 

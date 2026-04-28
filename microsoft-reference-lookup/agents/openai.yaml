@@ -1,5 +1,5 @@
 interface:
-  display_name: "Microsoft Reference Lookup"
+  display_name: "microsoft-reference-lookup"
   short_description: "Official Microsoft docs and code references"
   default_prompt: "Use $microsoft-reference-lookup for official Microsoft docs and code references."
 

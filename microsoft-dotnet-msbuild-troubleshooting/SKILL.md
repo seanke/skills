@@ -1,5 +1,5 @@
 ---
-name: microsoft-msbuild-troubleshooting
+name: microsoft-dotnet-msbuild-troubleshooting
 description: Use when an MSBuild or .NET build fails, needs a binlog replay, or has generated-file or output-path problems.
 ---
 

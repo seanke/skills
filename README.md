@@ -1,7 +1,7 @@
 # Skill Inventory
 
 This inventory excludes `.system/` because those skills are application-managed and ignored by Git.
-Skill folders are flat and use `microsoft-` for Microsoft-related skills or `generic-` for vendor-neutral ones.
+Skill folders are flat and use `microsoft-` for Microsoft-related skills, `microsoft-ado-` for Azure DevOps skills, `microsoft-dotnet-` for .NET-specific Microsoft skills, or `generic-` for vendor-neutral ones.
 
 ## Repository Conventions
 
@@ -9,6 +9,8 @@ Skill folders are flat and use `microsoft-` for Microsoft-related skills or `gen
 
 - Use lowercase kebab-case for every skill folder.
 - Prefix Microsoft-related skills with `microsoft-`.
+- Use `microsoft-ado-` for Azure DevOps-specific skills.
+- Use `microsoft-dotnet-` for .NET-specific Microsoft skills.
 - Prefix vendor-neutral skills with `generic-`.
 - Keep the folder name, `SKILL.md` frontmatter `name`, and generated metadata aligned.
 

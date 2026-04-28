@@ -1,5 +1,5 @@
 ---
-name: microsoft-csharp-edit-hygiene
+name: microsoft-dotnet-csharp-edit-hygiene
 description: Use when finishing a C# edit and you need XML docs or a low-risk using cleanup pass.
 ---
 

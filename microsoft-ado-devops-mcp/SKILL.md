@@ -1,5 +1,5 @@
 ---
-name: microsoft-azure-devops-mcp
+name: microsoft-ado-devops-mcp
 description: "Install, configure, and use the Azure DevOps MCP server in Codex or VS Code. Use when an agent needs to bring up the server, connect to an Azure DevOps organization, list projects or work items, choose MCP domains, or troubleshoot startup and auth issues."
 ---
 

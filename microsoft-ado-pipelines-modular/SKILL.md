@@ -1,5 +1,5 @@
 ---
-name: microsoft-azure-pipelines-modular
+name: microsoft-ado-pipelines-modular
 description: "Design, refactor, or review Azure DevOps `azure-pipelines.yml` to use modular stages, job templates, and step templates. Use when standardizing CI/CD YAML, extracting reusable templates, or aligning pipeline structure across multiple apps/environments in any repository."
 ---
 

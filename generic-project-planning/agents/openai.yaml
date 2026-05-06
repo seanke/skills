@@ -1,7 +1,7 @@
 interface:
   display_name: "generic-project-planning"
-  short_description: "Complex planning artifacts in .plan folders"
-  default_prompt: "Use $generic-project-planning for complex, multi-part plans that need `.plan/` files."
+  short_description: "Complex planning artifacts in .plan folders with separate question and step status tracking"
+  default_prompt: "Use generic-project-planning for complex plans that need `.plan/<plan-name>/` files. Write unresolved questions only in `open-questions.md`, then create numbered step files with a `Current state:` line plus `Plan` and `Findings / Outcome` sections. Keep question statuses and step lifecycle states separate."
 
 policy:
   allow_implicit_invocation: true

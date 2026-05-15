@@ -1,0 +1,4 @@
+interface:
+  display_name: "microsoft-ado-pull-requests"
+  short_description: "Create, read, and edit ADO PRs"
+  default_prompt: "Use $microsoft-ado-pull-requests to inspect or update an Azure DevOps pull request."

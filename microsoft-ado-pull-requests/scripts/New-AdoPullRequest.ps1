@@ -51,4 +51,17 @@ if (-not $ConfirmLiveWrite.IsPresent) {
 }
 
 $pullRequest = Invoke-AdoRest -Method POST -Url $url -Body $body -AuthMode $AuthMode -Context $context
-Add-AdoPullRequestWebUrl -InputObject $pullRequest -Context $context | Write-AdoJson
+$pullRequest = Add-AdoPullRequestWebUrl -InputObject $pullRequest -Context $context
+$pullRequestId = Get-AdoObjectPropertyValue -InputObject $pullRequest -Name 'pullRequestId'
+
+if ($null -ne $pullRequestId) {
+    $verifyUrl = New-AdoApiUrl -Context $context -Path "$repositoryPath/pullrequests/$pullRequestId"
+    $verifiedPullRequest = Invoke-AdoRest -Method GET -Url $verifyUrl -AuthMode $AuthMode -Context $context
+    $verifiedPullRequest = Add-AdoPullRequestWebUrl -InputObject $verifiedPullRequest -Context $context -PullRequestId ([int]$pullRequestId)
+    Assert-AdoPullRequestDraft -PullRequest $verifiedPullRequest -Context $context -PullRequestId ([int]$pullRequestId)
+    $verifiedPullRequest | Write-AdoJson
+    return
+}
+
+Assert-AdoPullRequestDraft -PullRequest $pullRequest -Context $context
+$pullRequest | Write-AdoJson

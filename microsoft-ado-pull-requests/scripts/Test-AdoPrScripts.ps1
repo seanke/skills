@@ -43,6 +43,36 @@ Assert-Equal -Actual $created.body.sourceRefName -Expected 'refs/heads/feature/d
 Assert-Equal -Actual $created.body.targetRefName -Expected 'refs/heads/main' -Name 'create target ref'
 Assert-Equal -Actual $created.body.isDraft -Expected $true -Name 'create draft flag'
 
+. (Join-Path $scriptRoot 'AdoPr.Common.ps1')
+$draftContext = [pscustomobject]@{
+    Organization = 'fabrikam'
+    Project      = 'Sample Project'
+    Repository   = 'sample-repo'
+}
+$draftPullRequest = [pscustomobject]@{
+    pullRequestId     = 123
+    isDraft           = $true
+    pullRequestWebUrl = $expectedPrUrl
+}
+Assert-AdoPullRequestDraft -PullRequest $draftPullRequest -Context $draftContext -PullRequestId 123
+
+$draftAssertionFailed = $false
+try {
+    Assert-AdoPullRequestDraft -PullRequest ([pscustomobject]@{
+        pullRequestId     = 123
+        isDraft           = $false
+        pullRequestWebUrl = $expectedPrUrl
+    }) -Context $draftContext -PullRequestId 123
+}
+catch {
+    $draftAssertionFailed = $true
+    if ($_.Exception.Message -notmatch [regex]::Escape($expectedPrUrl)) {
+        throw "Draft assertion error did not include the PR URL: $($_.Exception.Message)"
+    }
+}
+
+Assert-Equal -Actual $draftAssertionFailed -Expected $true -Name 'draft verification failure'
+
 $read = & (Join-Path $scriptRoot 'Get-AdoPullRequest.ps1') @context -PullRequestId 123 -IncludeThreads | ConvertFrom-Json
 Assert-Equal -Actual $read.pullRequestWebUrl -Expected $expectedPrUrl -Name 'read PR web URL'
 Assert-Equal -Actual $read.requests[0].method -Expected 'GET' -Name 'read PR method'

@@ -290,6 +290,46 @@ function Add-AdoPullRequestWebUrl {
     return $InputObject
 }
 
+function Assert-AdoPullRequestDraft {
+    param(
+        [Parameter(Mandatory = $true)]
+        [AllowNull()]
+        [object]$PullRequest,
+
+        [Parameter(Mandatory = $true)]
+        [pscustomobject]$Context,
+
+        [string]$Action = 'pull request create',
+
+        [int]$PullRequestId = 0
+    )
+
+    if ($null -eq $PullRequest) {
+        throw "$Action did not return a pull request response to verify."
+    }
+
+    $verifiedPullRequestId = if ($PullRequestId -gt 0) {
+        $PullRequestId
+    }
+    else {
+        Get-AdoObjectPropertyValue -InputObject $PullRequest -Name 'pullRequestId'
+    }
+
+    $pullRequestWebUrl = Get-AdoObjectPropertyValue -InputObject $PullRequest -Name 'pullRequestWebUrl'
+    if ([string]::IsNullOrWhiteSpace($pullRequestWebUrl) -and $null -ne $verifiedPullRequestId) {
+        $pullRequestWebUrl = New-AdoPullRequestWebUrl -Context $Context -PullRequestId ([int]$verifiedPullRequestId)
+    }
+
+    $isDraft = Get-AdoObjectPropertyValue -InputObject $PullRequest -Name 'isDraft'
+    if ($true -eq $isDraft) {
+        return
+    }
+
+    $state = if ($null -eq $isDraft) { 'missing' } else { [string]$isDraft }
+    $linkText = if ([string]::IsNullOrWhiteSpace($pullRequestWebUrl)) { 'unknown PR URL' } else { $pullRequestWebUrl }
+    throw "$Action expected Azure DevOps to return a draft PR because the request sent isDraft=true, but returned isDraft=$state. PR: $linkText"
+}
+
 function Get-AdoObjectPropertyValue {
     param(
         [Parameter(Mandatory = $true)]

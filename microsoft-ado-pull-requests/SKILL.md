@@ -35,6 +35,8 @@ Run every create, update, comment, or thread-status change with `-DryRun` first.
 - Add PR comments or replies: `scripts/Add-AdoPullRequestComment.ps1`
 - Edit review thread status: `scripts/Set-AdoPullRequestThreadStatus.ps1`
 
+For create operations, use `scripts/New-AdoPullRequest.ps1`. Do not create PRs through the Azure DevOps UI, `az repos pr create`, MCP calls, custom REST calls, or another script unless the user explicitly overrides this skill. This script is the enforcement point for draft-only PR creation, dry-run output, and browser-link output.
+
 ### 4. Validate locally after edits
 Run `scripts/Test-AdoPrScripts.ps1` after changing this skill. It parses every PowerShell script and exercises dry-run create, read, update, comment, and thread-status paths without network access.
 
@@ -45,7 +47,7 @@ Every script output that targets or returns a specific PR must include `pullRequ
 Never create, abandon, complete, retarget, comment on, or resolve a PR unless the user asked for that specific live action. If the request is exploratory, stop at read-only calls or dry-run output.
 
 ### 7. Always create draft PRs
-`New-AdoPullRequest.ps1` must always send `isDraft: true`. Do not add a non-draft creation path to this skill; PRs should be promoted out of draft manually or by an explicit later update.
+`New-AdoPullRequest.ps1` must always send `isDraft: true`. After a live create, it must read the created PR back and verify that Azure DevOps reports `isDraft: true` before reporting success. If ADO returns `isDraft: false` or omits the value, treat the action as failed and report the PR link so the user can inspect the non-draft PR immediately. Do not add a non-draft creation path to this skill; PRs should be promoted out of draft manually or by an explicit later update.
 
 ## References
 - [ADO PR REST notes](references/ado-pr-rest.md)
@@ -53,6 +55,6 @@ Never create, abandon, complete, retarget, comment on, or resolve a PR unless th
 ## Notes
 - REST calls use Azure DevOps Git API `api-version=7.1`.
 - Prefer the `pullRequestWebUrl` field over REST API `url` fields when reporting the PR to the user.
-- New PR creation is intentionally draft-only.
+- New PR creation is intentionally draft-only and must be verified from ADO's stored PR state.
 - Branch arguments can be `main`, `feature/x`, or full refs such as `refs/heads/main`; scripts normalize branch names before sending them.
 - Inline comment creation can require Azure DevOps iteration and change-tracking context. If that context is unknown, create a PR-level comment or read threads/iterations first instead of inventing line metadata.

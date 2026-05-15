@@ -9,6 +9,8 @@ Use official Azure DevOps Git REST API `7.1` endpoints for this skill.
 - List by project: `GET https://dev.azure.com/{organization}/{project}/_apis/git/pullrequests?api-version=7.1`
 - Update: `PATCH https://dev.azure.com/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullrequests/{pullRequestId}?api-version=7.1`
 
+Create requests must include `isDraft: true`. After live creation, read the PR back with the Get one endpoint and verify that the stored PR state still has `isDraft: true` before reporting success.
+
 The user-facing PR web link is:
 
 `https://dev.azure.com/{organization}/{project}/_git/{repository}/pullrequest/{pullRequestId}`
